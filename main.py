@@ -19,12 +19,11 @@ no_color = '\033[m'
 def gtts():
     system('clear')
     print(f'{f_vermelho}GTTS by @ONELOST.EXE{no_color}\n')
-    text = input(f'{f_amarelo}Digite o texto:{no_color} ')
-    idioma = input(f'{f_amarelo}Digite o idioma:{no_color} ')
+    texto = input(f'{no_color}Digite o texto:{l_amarelo} ')
+    idioma = input(f'{no_color}Digite o idioma:{l_amarelo} ')
     tts = gTTS(text=texto, lang=idioma, slow=False)
     tts.save("gtts.mp3")
     print(f'\n{f_vermelho}Resultado:{no_color}\n')
     system("mpg123 gtts.mp3")
-
 
 gtts()
