@@ -1,6 +1,6 @@
 from os import system
 from time import sleep
-import subprocess
+from gtts import gTTS
 
 # Cores
 
@@ -18,9 +18,9 @@ no_color = '\033[m'
 
 def gtts():
     system('clear')
-    logo = f'{f_vermelho}GTTS by @ONELOST.EXE{no_color}\n'
-    text = input('{f_amarelo}Digite o texto:{no_color} ')
-    idioma = input('{f_amarelo}Digite o idioma:{no_color} ')
+    print(f'{f_vermelho}GTTS by @ONELOST.EXE{no_color}\n')
+    text = input(f'{f_amarelo}Digite o texto:{no_color} ')
+    idioma = input(f'{f_amarelo}Digite o idioma:{no_color} ')
     tts = gTTS(text=texto, lang=idioma, slow=False)
     tts.save("gtts.mp3")
     print(f'\n{f_vermelho}Resultado:{no_color}\n')
